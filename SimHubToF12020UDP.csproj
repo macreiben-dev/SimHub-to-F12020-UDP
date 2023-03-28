@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="GameReaderCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\SimHub\GameReaderCommon.dll</HintPath>
+      <HintPath>L:\SimRacingTools\SimHub\GameReaderCommon.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -45,14 +45,11 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="SimHub.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\SimHub\SimHub.Logging.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="SimHub.Logging">
+      <HintPath>L:\SimRacingTools\SimHub\SimHub.Logging.dll</HintPath>
     </Reference>
     <Reference Include="SimHub.Plugins">
-      <HintPath>D:\Program Files\SimHub\SimHub.Plugins.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>L:\SimRacingTools\SimHub\SimHub.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="F12020Struct.cs" />
+    <Compile Include="Packets\RevlightsPercentService.cs" />
     <Compile Include="Packets\ParticipantDataPacket.cs" />
     <Compile Include="Packets\CarStatusDataPacket.cs" />
     <Compile Include="Packets\CarTelemetryDataPacket.cs" />
