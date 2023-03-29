@@ -2,12 +2,22 @@
 
 namespace SimHubToF12020UDP.Packets
 {
-    public static class RedLinePercentFuncs
+    public sealed class RedLinePercentFuncs : IRedLinePercentFuncs
     {
+        public double ComputeRedLinePercentValue(
+            double gameDataRpms,
+            double currentGearRedLineRpm,
+            double carSettingsMaxRpm)
+        {
+            return ComputeRedLinePercent(
+                gameDataRpms,
+                currentGearRedLineRpm,
+                carSettingsMaxRpm);
+        }
 
         public static double ComputeRedLinePercent(
-            double gameDataRpms, 
-            double currentGearRedLineRpm, 
+            double gameDataRpms,
+            double currentGearRedLineRpm,
             double carSettingsMaxRpm)
         {
 

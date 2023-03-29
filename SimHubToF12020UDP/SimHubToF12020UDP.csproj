@@ -67,6 +67,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Packets\IRedLinePercentFuncs.cs" />
     <Compile Include="Packets\ISimHubPluginManagerRpm.cs" />
     <Compile Include="Packets\PluginManagerRpmWrapper.cs" />
     <Compile Include="Packets\RedLinePercentFuncs.cs" />
