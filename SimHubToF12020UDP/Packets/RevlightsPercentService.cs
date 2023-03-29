@@ -13,47 +13,22 @@ namespace SimHubToF12020UDP.Packets
 
         public static double ComputeRevLightsPercent(PluginManager pluginManager)
         {
-            double gameDataRpms = GetGameDataRpms(pluginManager);
-            double currentGearRedLineRpm = GetCurrentGearRedLineRpm(pluginManager);
-            double carSettingsMaxRpm = GetCarSettingsMaxRpm(pluginManager);
+            double gameDataRpms = PluginManagerRpmWrapper.GetGameDataRpms(pluginManager);
+            double currentGearRedLineRpm = PluginManagerRpmWrapper.GetCurrentGearRedLineRpm(pluginManager);
+            double carSettingsMaxRpm = PluginManagerRpmWrapper.GetCarSettingsMaxRpm(pluginManager);
 
             //double v = Convert.ToDouble(pluginManager.GetPropertyValue("DataCorePlugin.GameData.CarSettings_CurrentGearRedLineRPM"));
             var redlinePercent = Math.Max(0, gameDataRpms - currentGearRedLineRpm)
                                 / (carSettingsMaxRpm - currentGearRedLineRpm);
 
-            double rpmShiftLight1 = GetRpmShiftLight1(pluginManager);
-            double rpmShiftLight2 = GetRpmShiftLight2(pluginManager);
+            double rpmShiftLight1 = PluginManagerRpmWrapper.GetRpmShiftLight1(pluginManager);
+            double rpmShiftLight2 = PluginManagerRpmWrapper.GetRpmShiftLight2(pluginManager);
 
             var revLightsPercent = rpmShiftLight1 / 3.0
                                     + rpmShiftLight2 / 3.0
                                     + redlinePercent / 3.0;
 
             return revLightsPercent;
-        }
-
-        public static double GetRpmShiftLight2(PluginManager pluginManager)
-        {
-            return Convert.ToDouble(pluginManager.GetPropertyValue(RpmShiftLight2));
-        }
-
-        public static double GetRpmShiftLight1(PluginManager pluginManager)
-        {
-            return Convert.ToDouble(pluginManager.GetPropertyValue(CarSettingsRpmShiftLight1));
-        }
-
-        public static double GetCarSettingsMaxRpm(PluginManager pluginManager)
-        {
-            return Convert.ToDouble(pluginManager.GetPropertyValue(CarSettingsMaxRpm));
-        }
-
-        public static double GetCurrentGearRedLineRpm(PluginManager pluginManager)
-        {
-            return Convert.ToDouble(pluginManager.GetPropertyValue(CurrentGeatRedLineRpm));
-        }
-
-        public static double GetGameDataRpms(PluginManager pluginManager)
-        {
-            return Convert.ToDouble(pluginManager.GetPropertyValue(GameDataRpms));
         }
     }
 }
