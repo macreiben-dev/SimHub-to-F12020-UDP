@@ -10,6 +10,7 @@ namespace SimHubToF12020UDP.Packets
         private const string CarSettingsMaxRpm = "DataCorePlugin.GameData.CarSettings_MaxRPM";
         private const string CarSettingsRpmShiftLight1 = "DataCorePlugin.GameData.CarSettings_RPMShiftLight1";
         private const string CarSettingsRpmShiftLight2 = "DataCorePlugin.GameData.CarSettings_RPMShiftLight2";
+        
         private readonly double _rpmShiftLight1;
         private readonly double _rpmShiftLight2;
         private readonly double _carSettingsMaxRpm;

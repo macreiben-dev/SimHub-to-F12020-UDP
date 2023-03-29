@@ -67,7 +67,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packets\IPluginManagerRpmWrapper.cs" />
+    <Compile Include="Packets\IPluginManagerRpm.cs" />
     <Compile Include="Packets\PluginManagerRpmWrapper.cs" />
     <Compile Include="Packets\RevlightsPercentService.cs" />
     <Compile Include="DataStructures\CarStatusData.cs" />

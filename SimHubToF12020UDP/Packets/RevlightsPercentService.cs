@@ -30,5 +30,6 @@ namespace SimHubToF12020UDP.Packets
 
             return revLightsPercent;
         }
+
     }
 }
