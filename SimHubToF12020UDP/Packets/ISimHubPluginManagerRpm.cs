@@ -1,6 +1,6 @@
 ﻿namespace SimHubToF12020UDP.Packets;
 
-public interface IPluginManagerRpm
+public interface ISimHubPluginManagerRpm
 {
     double CarSettingsMaxRpmValue { get; }
     double CurrentGearRedLineRpmValue { get; }
