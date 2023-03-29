@@ -2,10 +2,13 @@
 
 namespace SimHubToF12020UDP.Packets
 {
-    internal static class RedLinePercentFuncs
+    public static class RedLinePercentFuncs
     {
 
-        public static double ComputeRedLinePercent(double gameDataRpms, double currentGearRedLineRpm, double carSettingsMaxRpm)
+        public static double ComputeRedLinePercent(
+            double gameDataRpms, 
+            double currentGearRedLineRpm, 
+            double carSettingsMaxRpm)
         {
 
             //double v = Convert.ToDouble(pluginManager.GetPropertyValue("DataCorePlugin.GameData.CarSettings_CurrentGearRedLineRPM"));
