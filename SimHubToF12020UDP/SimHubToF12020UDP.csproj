@@ -45,9 +45,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="SimHub.Logging">
-      <HintPath>L:\SimRacingTools\SimHub\SimHub.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="SimHub.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\thirparties\Simhub-8.2.0\SimHub.Logging.dll</HintPath>

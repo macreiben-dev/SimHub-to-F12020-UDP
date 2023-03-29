@@ -6,7 +6,7 @@ namespace SimHubToF12020UDP.Packets
     internal static class RevlightsPercentService
     {
 
-        private static double ComputeRevLightsPercent(PluginManager pluginManager)
+        internal static double ComputeRevLightsPercent(PluginManager pluginManager)
         {
             double gameDataRpms = Convert.ToDouble(pluginManager.GetPropertyValue("DataCorePlugin.GameData.Rpms"));
 
