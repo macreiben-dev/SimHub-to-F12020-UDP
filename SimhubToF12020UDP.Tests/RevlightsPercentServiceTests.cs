@@ -33,9 +33,12 @@ public class RevlightsPercentServiceTests
         _pluginManager.CurrentGearRedLineRpmValue.Returns(0.0);
         _pluginManager.CarSettingsMaxRpmValue.Returns(1.0);
 
+        _redlinePercentFuncs.ComputeRedLinePercentValue(1.0, 0.0, 1.0)
+            .Returns(0.0);
+
         var actual = RevlightsPercentService.ComputeRevLightsPercent(_pluginManager, _redlinePercentFuncs);
 
-        Check.That(actual).IsEqualTo(1.3333333333333333);
+        Check.That(actual).IsEqualTo(1);
     }
 
     [Fact]
