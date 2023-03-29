@@ -3,10 +3,10 @@ using System;
 
 namespace SimHubToF12020UDP.Packets
 {
-    internal static class RevlightsPercentService
+    public static class RevlightsPercentService
     {
 
-        internal static double ComputeRevLightsPercent(PluginManager pluginManager)
+        public static double ComputeRevLightsPercent(PluginManager pluginManager)
         {
             double gameDataRpms = Convert.ToDouble(pluginManager.GetPropertyValue("DataCorePlugin.GameData.Rpms"));
 
@@ -25,6 +25,7 @@ namespace SimHubToF12020UDP.Packets
             var revLightsPercent = rpmShiftLight1 / 3.0
                                     + rpmShiftLight2 / 3.0
                                     + redlinePercent / 3.0;
+
             return revLightsPercent;
         }
     }
