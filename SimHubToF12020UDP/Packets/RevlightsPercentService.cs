@@ -30,10 +30,7 @@ namespace SimHubToF12020UDP.Packets
             double gameDataRpms = pluginManager.GameDataRpmsValue;
             double currentGearRedLineRpm = pluginManager.CurrentGearRedLineRpmValue;
             double carSettingsMaxRpm = pluginManager.CarSettingsMaxRpmValue;
-
-            //double v = Convert.ToDouble(pluginManager.GetPropertyValue("DataCorePlugin.GameData.CarSettings_CurrentGearRedLineRPM"));
-            var redlinePercent = Math.Max(0, gameDataRpms - currentGearRedLineRpm)
-                                / (carSettingsMaxRpm - currentGearRedLineRpm);
+            double redlinePercent = RedLinePercentFuncs.ComputeRedLinePercent(gameDataRpms, currentGearRedLineRpm, carSettingsMaxRpm);
 
             double rpmShiftLight1 = pluginManager.RpmShiftLight1;
             double rpmShiftLight2 = pluginManager.RpmShiftLight2;
