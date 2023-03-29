@@ -3,7 +3,7 @@ using System;
 
 namespace SimHubToF12020UDP.Packets
 {
-    internal class PluginManagerRpmWrapper : IPluginManagerRpmWrapper
+    internal class PluginManagerRpmWrapper : IPluginManagerRpm
     {
         private const string GameDataRpms = "DataCorePlugin.GameData.Rpms";
         private const string CurrentGearRedLineRpm = "DataCorePlugin.GameData.CarSettings_CurrentGearRedLineRPM";
