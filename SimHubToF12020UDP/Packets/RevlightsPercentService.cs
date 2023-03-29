@@ -25,11 +25,14 @@ namespace SimHubToF12020UDP.Packets
             return revLightsPercent;
         }
 
-        public static double ComputeRevLightsPercent(ISimHubPluginManagerRpm pluginManager)
+        public static double ComputeRevLightsPercent(
+            ISimHubPluginManagerRpm pluginManager, 
+            IRedLinePercentFuncs redlinePercentFuncs)
         {
             double gameDataRpms = pluginManager.GameDataRpmsValue;
             double currentGearRedLineRpm = pluginManager.CurrentGearRedLineRpmValue;
             double carSettingsMaxRpm = pluginManager.CarSettingsMaxRpmValue;
+
             double redlinePercent = RedLinePercentFuncs.ComputeRedLinePercent(gameDataRpms, currentGearRedLineRpm, carSettingsMaxRpm);
 
             double rpmShiftLight1 = pluginManager.RpmShiftLight1;

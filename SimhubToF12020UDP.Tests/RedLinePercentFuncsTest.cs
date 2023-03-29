@@ -64,4 +64,20 @@ public class RedLinePercentFuncsTest
 
         Check.That(actual).IsEqualTo(0.5);
     }
+
+
+    [Fact]
+    public void GIVEN_redlinePercentFuns_injectable_AND_gameDataRpms_is_four_AND_currentGearRedLineRpm_is_three_AND_carSettingsMaxRpm_is_five_THEN_redlinePercent_is_onePointFive()
+    {
+        var gameDataRpms = 4.0;
+        var currentGearRedLineRpm = 3.0;
+        var carSettingsMaxRpm = 5.0;
+
+        var actual = new RedLinePercentFuncs().ComputeRedLinePercentValue(
+            gameDataRpms,
+            currentGearRedLineRpm,
+            carSettingsMaxRpm);
+
+        Check.That(actual).IsEqualTo(0.5);
+    }
 }
