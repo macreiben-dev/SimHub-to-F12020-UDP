@@ -15,6 +15,11 @@ public class RevlightsPercentServiceIntegrationTests
         _redlinePercentFuncs = new RedLinePercentFuncs();
     }
 
+    public RevlightsPercentService GetTarget()
+    {
+        return new RevlightsPercentService();
+    }
+
     [Fact]
     public void GIVEN_onely_rpmshift1Percent_not_zero_AND_rpmshift2Percent_is_zero_THEN_compute_rpm_percent()
     {
@@ -32,7 +37,7 @@ public class RevlightsPercentServiceIntegrationTests
         _pluginManager.CurrentGearRedLineRpmValue.Returns(originalCurrentGearRedLineRpmValue);
         _pluginManager.CarSettingsMaxRpmValue.Returns(originalCarSettingsMaxRpmValue);
 
-        var actual = RevlightsPercentService.ComputeRevLightsPercent(
+        var actual = GetTarget().ComputeRevLightsPercent(
             _pluginManager,
             _redlinePercentFuncs);
 
@@ -57,7 +62,7 @@ public class RevlightsPercentServiceIntegrationTests
         _pluginManager.CurrentGearRedLineRpmValue.Returns(originalCurrentGearRedLineRpmValue);
         _pluginManager.CarSettingsMaxRpmValue.Returns(originalCarSettingsMaxRpmValue);
 
-        var actual = RevlightsPercentService.ComputeRevLightsPercent(
+        var actual = GetTarget().ComputeRevLightsPercent(
             _pluginManager,
             _redlinePercentFuncs);
 
@@ -82,7 +87,7 @@ public class RevlightsPercentServiceIntegrationTests
         _pluginManager.CurrentGearRedLineRpmValue.Returns(originalCurrentGearRedLineRpmValue);
         _pluginManager.CarSettingsMaxRpmValue.Returns(originalCarSettingsMaxRpmValue);
 
-        var actual = RevlightsPercentService.ComputeRevLightsPercent(
+        var actual = GetTarget().ComputeRevLightsPercent(
             _pluginManager,
             _redlinePercentFuncs);
 

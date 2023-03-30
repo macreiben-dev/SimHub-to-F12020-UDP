@@ -3,7 +3,7 @@ using System;
 
 namespace SimHubToF12020UDP.Packets
 {
-    public static class RevlightsPercentService
+    public class RevlightsPercentService
     {
         public static double ComputeRevLightsPercent(PluginManager pluginManager)
         {
@@ -25,7 +25,7 @@ namespace SimHubToF12020UDP.Packets
             return revLightsPercent;
         }
 
-        public static double ComputeRevLightsPercent(
+        public double ComputeRevLightsPercent(
             ISimHubPluginManagerRpm pluginManager, 
             IRedLinePercentFuncs redlinePercentFuncs)
         {
