@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimhubToF12020UDP.Tests", "SimhubToF12020UDP.Tests\SimhubToF12020UDP.Tests.csproj", "{C237C912-15AE-4E1F-8525-6F4929832510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimhubToF12020UDP.Integration.Tests", "SimhubToF12020UDP.Integration.Tests\SimhubToF12020UDP.Integration.Tests.csproj", "{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,12 @@ Global
 		{C237C912-15AE-4E1F-8525-6F4929832510}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C237C912-15AE-4E1F-8525-6F4929832510}.WithSimhub|Any CPU.ActiveCfg = WithSimhub|Any CPU
 		{C237C912-15AE-4E1F-8525-6F4929832510}.WithSimhub|Any CPU.Build.0 = WithSimhub|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.WithSimhub|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CF759C-A36C-4EE9-93BD-EF83E3DEBB74}.WithSimhub|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
